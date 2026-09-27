@@ -1,23 +1,65 @@
 aid: axton
+
 name: Axton
-description: 'Axton is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://axton.ca/wp-content/uploads/2021/07/Axton-Home-Capabilities-Cooler-Condenser-1024x685.jpg
+
+description: 'Axton Inc. is a custom equipment manufacturing company based in Delta, British Columbia, Canada. Founded in 1976, it serves heavy industries such as petro‑chemical, oil & gas, pulp & paper, mining, and environmental sectors. The firm designs, engineers, fabricates and assembles pressure vessels, heat exchangers, tanks, rotating equipment, and complex mechanical systems, offering end‑to‑end solutions from concept through delivery.'
+
 url: https://raw.githubusercontent.com/api-evangelist/axton/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
-- Company
-apis: []
+- Manufacturing
+- Metal Fabrication
+- Industrial Equipment
+- Canada
+- Engineering
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/axton-hosts.yml
+- type: PrivacyPolicy
+  url: https://axton.ca/privacy-policy/
+- type: DomainSecurity
+  url: security/axton-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/axton
+  url: https://axton.ca
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-27'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://equityzen.com/company/axton
+    status: 403
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
